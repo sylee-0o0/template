@@ -6,20 +6,20 @@
     <title>실습-260723</title>
     <link rel="stylesheet" href="ps-style.css">
     <style>
-        .page-wrap {
-        max-width: 3000px;
-        }
         .imagebox {
             margin-top: 30px;
             display: flex;
             flex-flow: row wrap;
             justify-content: center;
-            align-items: start;
+            align-items: flex-start;
             gap: 5px;
         }
-        .imagebox *{
-            flex: 0 0 450px;
-            height: 450px;
+        .imagebox img {
+            max-height: 450px;
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            flex: 0 1 auto;
         }
     </style>
 </head>
