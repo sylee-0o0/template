@@ -6,17 +6,19 @@
     <title>실습-260723</title>
     <link rel="stylesheet" href="ps-style.css">
     <style>
+        .page-wrap {
+        max-width: 1000px;
+        }
         .imagebox {
             margin-top: 30px;
             display: flex;
-            flex-direction: row;
+            flex-flow: row-wrap;
             justify-content: center;
             align-items: start;
-            flex-wrap: wrap;
             gap: 5px;
         }
         .imagebox *{
-            flex: 0 450px;
+            flex: 0 0 450px;
             height: 450px;
         }
     </style>
@@ -25,7 +27,7 @@
     <div class="page-wrap">
         <nav class="crumb"><a href="practicesite.html">홈</a> / <a href="ps-temp.html">Template</a></nav>
     <div class="imagebox">
-        <img src="https://i.pinimg.com/736x/33/ff/d6/33ffd6a7f5fa801d3c03aab9566a3f46.jpg" alt="이 사람이... 아직 준비가 안 되어 있습니까?"> <br>
+        <img src="https://i.pinimg.com/736x/33/ff/d6/33ffd6a7f5fa801d3c03aab9566a3f46.jpg" alt="이 사람이... 아직 준비가 안 되어 있습니까?">
         <img src="https://mblogthumb-phinf.pstatic.net/MjAxOTA4MjVfODQg/MDAxNTY2NzM1NDc5MTUw.VFrDFQAebFj_sNIW_jHRs52vdGMpdyvx-aq36SvQAqUg.qsB_P5QL2ISnmObwfjdvckkSsN9VtPoAQZeKN3h3sPQg.JPEG.ondo_h/SE-7bbb465c-c7a8-422c-b27a-4ede37fbeaca.jpg?type=w800" alt="네">
     </div>
 </body>
