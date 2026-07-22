@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="ps-style.css">
     <style>
         .imagebox {
-            max-width: 1000px;
             margin-top: 30px;
             display: flex;
             flex-direction: row;
@@ -16,8 +15,8 @@
             flex-wrap: wrap;
             gap: 5px;
         }
-        .imagebox *{
-            height: 450px;
+        .imagebox > img {
+            flex: 0 450px;
         }
     </style>
 </head>
