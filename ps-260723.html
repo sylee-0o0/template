@@ -17,16 +17,15 @@
             align-items: start;
             gap: 5px;
         }
-        /*.imagebox img {
-            flex: 0 0 450px;
-            height: 450px;
-        }*/
         .imagebox img {
-            max-height: 450px;
-            max-width: 100%;
+            height: 450px;
             width: auto;
+            max-width: 100%;
+        }
+        @media (max-width: 500px) {
+            .imagebox img {
             height: auto;
-            flex: 0 1 auto;
+            width: 100%;
         }
     </style>
 </head>
