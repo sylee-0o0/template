@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ㅇㅅㅇ의 실습 페이지</title>
+    <link rel="stylesheet" href="ps-style.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <header class="site-title">
+        <h1 class="title-stage"><span id="titleText" aria-hidden="true"></span><span class="cursor" aria-hidden="true">|</span></h1>
+    </header>
+
+    <main class="page-wrap">
+        <ul class="listing-main-listing">
+            <li><a href="https://sylee-0o0.github.io/mondaymorningbird/#section-1" title="제가 보이시나요?"> </a></li>
+            <li><a href="ps-temp.html">📁 Templete</a></li>
+        </ul>
+    </main>
+
+    <script>
+        const target = 'ㅇㅅㅇ 실습 페이지';
+        const glyphPool = 'ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎㅏㅑㅓㅕㅗㅛㅜㅠㅡㅣ#$%&*+=~^01234567890'.split('');
+        const titleTextEl = document.getElementById('titleText');
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        function sleep(ms){ return new Promise(r => setTimeout(r, ms)); }
+        function randChar(){ return glyphPool[Math.floor(Math.random() * glyphPool.length)]; }
+        function randomString(len){ return Array.from({length: len}, randChar).join(''); }
+
+        async function typeString(str, speed){
+        titleTextEl.textContent = '';
+        for(let i = 0; i < str.length; i++){ titleTextEl.textContent += str[i]; await sleep(speed); }
+        }
+        async function eraseString(speed){
+        while(titleTextEl.textContent.length > 0){ titleTextEl.textContent = titleTextEl.textContent.slice(0, -1); await sleep(speed); }
+        }
+        async function resolveTarget(str, speed, flickers){
+        let current = '';
+        for(let i = 0; i < str.length; i++){
+        if(str[i] === ' '){ current += ' '; titleTextEl.textContent = current; await sleep(speed); continue; }
+        for(let f = 0; f < flickers; f++){ titleTextEl.textContent = current + randChar(); await sleep(speed * 0.55); }
+        current += str[i];
+        titleTextEl.textContent = current;
+        await sleep(speed);
+        }
+        }
+        async function playCycle(){
+        if(prefersReducedMotion){ titleTextEl.textContent = target; return; }
+        await typeString(randomString(7 + Math.floor(Math.random()*4)), 42);
+        await sleep(320);
+        await eraseString(24);
+        await sleep(140);
+        await typeString(randomString(6 + Math.floor(Math.random()*4)), 42);
+        await sleep(320);
+        await eraseString(24);
+        await sleep(160);
+        await resolveTarget(target, 58, 5);
+        setTimeout(playCycle, 30000);
+        }
+        playCycle();
+    </script>
+</body>
+</html>

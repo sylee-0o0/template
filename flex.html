@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+        ul {
+            width: auto;
+            height: 50px;
+            background-color: darkolivegreen;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: start;
+        }
+        ul > li {
+            color: white;
+            line-height: 50px;
+            text-align: center;    
+            font-size: 15px;
+        }
+        .container {
+            width: 500px;
+            height: 500px;
+            background-color: lightgray;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+        }
+        .container *{
+            color: white;
+            line-height: 100px;
+            text-align: center;    
+            font-size: 40px;
+            height: 100px;
+            width: 100px;
+        }
+        .container > div{
+            width: 500px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: start;
+        }
+        .blue {
+            background-color: #4967d8;
+        }    
+        .pink *{
+            background-color: #ea8676;
+        }
+        .yellow {
+            background-color: #fad84a;
+        }
+</style>
+</head>
+<body>
+    <ul>
+        <li>Home</li>
+        <li>인사말</li>
+        <li>제품</li>
+        <li>고객센터</li>
+        <li>로그인</li>
+    </ul>
+    <br><br><br><br><br><br>
+    <div class="container">
+        <div class="up">
+            <div class="blue">A</div>
+            <div class="blue">D</div>
+            <div class="yellow">H</div>
+        </div>
+        <div class="pink">
+            <div class="B">B</div>
+            <div class="G">G</div>
+        </div>
+        <div class="low">
+            <div class="yellow">C</div>
+            <div class="yellow">E</div>
+            <div class="blue">F</div>
+        </div>
+    </div>
+</body>
+</html>

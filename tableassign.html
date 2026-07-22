@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>월요일 수업 시간표</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            padding: 5px;
+            /* text-align: center; */
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>월요일 수업 시간표</caption>
+        <thead>
+            <tr>
+                <th>교시</th>
+                <th>과목</th>
+                <th>강의실</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1교시</td>
+                <td rowspan="2">HTML 기초</td>
+            <td>301호</td>
+        </tr>
+        <tr>
+            <td>2교시</td>
+            <td>301호</td>
+        </tr>
+        <tr>
+            <td>3교시</td>
+            <td colspan="2">점심시간</td>
+        </tr>
+    </table>
+</body>
+</html>

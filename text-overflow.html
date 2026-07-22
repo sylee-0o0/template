@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text-overflow 실습</title>
+    <style>
+        ul {
+            width: 320px;
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            border-bottom: 1px solid #ddd;
+            padding: 8px 4px;
+
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .org { font-weight: bold;}
+    </style>
+</head>
+<body>
+    <ul>
+        <li><span class="org">중앙대학교</span> 융합공학부 바이오메디컬공학전공 세포대사 연구실 연구원 모집</li>
+        <li><span class="org">창원시정연구원</span> 2024년 제1회 공무직(전문원) 채용</li>
+        <li><span class="org">한국핵융합에너지연구원</span> 정규직 채용</li>
+        <li><span class="org">부산대학교</span> 항공우주공학과 로켓추진실험실(RPL) 박사후연구원 모집 공고</li>
+        <li><span class="org"></span></li>
+    </ul>
+
+    
+</body>
+</html>
