@@ -37,7 +37,7 @@ header.site-title {
 /* 홈 화면의 폴더 목록: 다른 페이지 listing과 같은 형태, 글씨만 살짝 크게 */
 .listing-main-listing { list-style: none; margin: 0; padding: 0;}
 .listing-main-listing li a { list-style: none; font-size: 20px; padding: 12px 20px; }
- 
+
 
 /* 경로 표시 */
 .crumb { margin-bottom: 8px; font-size: 13px; color: #888; }
@@ -50,7 +50,7 @@ header.site-title {
 
 /* 목록 (폴더 페이지, 파일 목록 페이지 공통) */
 .listing { list-style: none; margin: 0; padding: 0; }
-.listing li a { display: block; padding: 8px 20px; font-size: 17px; font-weight: 600; border-bottom: 1px solid #eee; }
+.listing li a { display: block; padding: 8px 20px; font-size: 17px; font-weight: 600; /*border-bottom: 1px solid #eee;*/ }
 .listing li:last-child a { border-bottom: none; }
 
 /* 홈 타이틀 커서 */
