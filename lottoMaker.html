@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lottery random number</title>
+</head>
+<body>
+    <h1>로또 번호 추첨기</h1>
+    <button id="btn">추첨</button>
+    <button id="bonus">보너스 번호</button>
+    <div id="result"></div>
+    <div id="bonusResult"></div>
+
+    <script>
+        const randomBtn = document.getElementById("btn");
+        const result = document.getElementById("result");
+        const bonusBtn = document.getElementById("bonus");
+        const resultBonus = document.getElementById("bonusResult");
+
+        let numbers = [];
+
+        function createBall(num, container, index) {
+            const ball = document.createElement("span");
+            ball.className = "ball" + getRangeClass(num);
+            ball.textContent = num;
+            ball.style.animationDelay = (index * 0.15) + "s";
+            container.appendChild(ball);
+        }
+
+        randomBtn.addEventListener("click", () => {
+            numbers = [];
+            for (let i = 0; i < 6; i++) {
+                const num = Math.floor(Math.random() * 45) + 1;
+                if(numbers.includes(num)) {
+                    i--;
+                } else {
+                    numbers.push(num);
+                }
+            }
+            numbers.sort((a, b) => a - b);
+            console.log(`추첨 번호: ${numbers}`);
+
+            result.textContent = numbers.join(', ');
+
+            numbers.forEach((num, index) => {
+                createBall(num, result, index);
+            });
+        })
+
+        bonusBtn.addEventListener("click", () => {
+            let bonusNum;
+            do {
+                bonusNum = Math.floor(Math.random() * 45) + 1;
+            } while (numbers.includes(bonusNum));
+            
+            console.log(`보너스 번호: ${bonusNum}`);
+            resultBonus.textContent = bonusNum;
+        })
+    </script>
+</body>
+</html>
